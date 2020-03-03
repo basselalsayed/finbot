@@ -22,7 +22,6 @@ class Greeting extends React.Component {
 
   render() {
     return this.state.greeting
-    // return <h2>Hello, World!</h2>;
   }
 }
 
