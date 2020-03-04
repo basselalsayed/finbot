@@ -14,7 +14,6 @@ class Greeting extends React.Component {
   }
 
   apiCall = () => {
-    console.log('hello')
     axios
     .get('http://localhost:8000/greetings')
     .then(res => this.setState({ greeting: res.data }))
