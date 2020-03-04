@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<header
+  style={
+    Object {
+      "background": "#333",
+      "color": "#fff",
+      "padding": "10px",
+      "textAlign": "center",
+    }
+  }
+>
+  <h1>
+    Finbot
+  </h1>
+  <a
+    href="/"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "#fff",
+        "textDecoration": "none",
+      }
+    }
+  >
+    Home
+  </a>
+</header>
+`;
