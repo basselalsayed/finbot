@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Greeting from './components/greeting/Greeting'
+import Header from './components/header/Header'
+// eslint-disable-next-line
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,12 +11,17 @@ import {
 import './App.css';
 
 
-function App() {
+export default class App extends Component {
+  render() {
   return (
-    <div className="App">
-      <Greeting />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Greeting />
+      </div>
+    </Router>
   );
+  }
 }
 
-export default App;
+
