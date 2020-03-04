@@ -16,5 +16,8 @@ test('Header renders', () => {
 })
 
 test('Header contains header html element', () => {
-  expect(render(<Router><Header /></Router>).text()).toEqual('FinbotHome') 
+  expect(render(
+    <Router>
+      <Header />
+    </Router>).text()).toEqual('FinbotHome') 
 })
