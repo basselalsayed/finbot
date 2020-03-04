@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Greeting from './components/greeting/Greeting'
 import Header from './components/header/Header'
+import Chatbot from './components/chatbot/Chatbot'
 // eslint-disable-next-line
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Greeting />
+        <Chatbot />
       </div>
     </Router>
   );
