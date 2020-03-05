@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
+import axios from 'axios'
 
 export default class NewMessage extends Component {
   constructor(props) {
@@ -13,11 +14,23 @@ export default class NewMessage extends Component {
   }
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
+  apiCallPost = () => {
+    const userInput = {
+      text: this.state.content
+    }
+
+    axios
+    .post('http://localhost:8000/api/user_input/', userInput)
+  };
+
   onSubmit = (e) => {
     e.preventDefault();
+    this.apiCallPost()
     this.props.newMessage(this.state);
     this.setState({content: '', type: 'send'})
-  }
+    setTimeout(() => {
+      this.props.apiCallGet()
+    }, 3000);  }
   
   render() {
     return (
@@ -33,7 +46,8 @@ export default class NewMessage extends Component {
   }
 }
 NewMessage.propTypes = {
-  newMessage: PropTypes.func.isRequired
+  newMessage: PropTypes.func.isRequired,
+  apiCallGet: PropTypes.func.isRequired,
 }
 
 

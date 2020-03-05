@@ -23,6 +23,16 @@ export default class ExampleContainer extends Component {
        ]
     }
   // }
+
+  apiCallGet = () => {
+    axios
+    .get('http://localhost:8000/api/')
+    .then(res => this.newMessage(
+      { content: res.data,
+        type: 'response'
+      })) 
+  };
+
   newMessage = (message) => {
     let clone = this.state.messages.slice()
     let length = clone.length
@@ -30,6 +40,7 @@ export default class ExampleContainer extends Component {
     clone[length] = message
     this.setState({ messages: clone })
   }
+
   render() {
     return(
 
@@ -39,7 +50,7 @@ export default class ExampleContainer extends Component {
           <Conversation messages={this.state.messages} />
         </Card.Body>
         <Card.Footer>
-          <NewMessage newMessage={this.newMessage} />
+          <NewMessage newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
         </Card.Footer>
       </Card>
 
