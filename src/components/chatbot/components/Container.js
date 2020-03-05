@@ -7,30 +7,28 @@ import axios from 'axios'
 
 export default class ExampleContainer extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  
-    state = {
-       messages: [
-          {
-            content: 'hello, whats your name?',
-            type: 'response'
-          }, 
-          {
-            content: 'hey',
-            type: 'send'
-          }
-       ]
-    }
-  // }
+  state = {
+    messages: [
+      {
+        content: 'hello, whats your name?',
+        type: 'response'
+      }, 
+      {
+        content: 'hey',
+        type: 'send'
+      }
+    ]
+  }
 
   apiCallGet = () => {
     axios
-    .get('http://localhost:8000/api/')
-    .then(res => this.newMessage(
-      { content: res.data,
-        type: 'response'
-      })) 
+      .get('http://localhost:8000/api/')
+      .then(res => this.newMessage(
+        { 
+          content: res.data,
+          type: 'response'
+        }
+      )) 
   };
 
   newMessage = (message) => {
@@ -42,8 +40,7 @@ export default class ExampleContainer extends Component {
   }
 
   render() {
-    return(
-
+    return (
       <Card style={{ width: '20rem' }}>
         <Card.Header>Finbot</Card.Header>
         <Card.Body>
@@ -53,7 +50,6 @@ export default class ExampleContainer extends Component {
           <NewMessage newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
         </Card.Footer>
       </Card>
-
-  )
-}
+    )
+  }
 }

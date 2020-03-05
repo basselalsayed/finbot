@@ -20,7 +20,7 @@ export default class NewMessage extends Component {
     }
 
     axios
-    .post('http://localhost:8000/api/user_input/', userInput)
+      .post('http://localhost:8000/api/user_input/', userInput)
   };
 
   onSubmit = (e) => {
