@@ -9,7 +9,7 @@ export default class Conversation extends Component {
 
   render() {
     return this.props.messages.map((message) => (
-        <Message key={uuid.v4()} content={message}/>
+        <Message key={uuid.v4()} message={message} />
       ))
   }
 }

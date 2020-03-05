@@ -7,23 +7,23 @@ export default class NewMessage extends Component {
     super(props)
 
     this.state = {
-      message: ''
+      content: '',
+      type: 'send'
     }
   }
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   onSubmit = (e) => {
-    console.log(this)
     e.preventDefault();
-    this.props.newMessage(this.state.message);
-    this.setState({message: ''})
+    this.props.newMessage(this.state);
+    this.setState({content: '', type: 'send'})
   }
   
   render() {
     return (
       <Form onSubmit={this.onSubmit} inline>
         <Form.Group controlId="formBasicEmail">
-          <Form.Control name='message' type="text" value={this.state.message} onChange={this.onChange} placeholder="Ask me anything" />
+          <Form.Control name='content' type="text" value={this.state.content} onChange={this.onChange} placeholder="Ask me anything" />
           <Button variant='primary' type='submit'>
             Send
           </Button>

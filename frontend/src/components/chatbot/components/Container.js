@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Card, Form, Button } from 'react-bootstrap'
 import Conversation from './Conversation'
 import NewMessage from './NewMessage';
+import axios from 'axios'
 
 export default class ExampleContainer extends Component {
 
@@ -10,12 +11,22 @@ export default class ExampleContainer extends Component {
   //   super(props)
   
     state = {
-       messages: ['hello', 'hey']
+       messages: [
+          {
+            content: 'hello, whats your name?',
+            type: 'response'
+          }, 
+          {
+            content: 'hey',
+            type: 'send'
+          }
+       ]
     }
   // }
   newMessage = (message) => {
     let clone = this.state.messages.slice()
     let length = clone.length
+    // add element to cloned array
     clone[length] = message
     this.setState({ messages: clone })
   }
@@ -28,7 +39,7 @@ export default class ExampleContainer extends Component {
           <Conversation messages={this.state.messages} />
         </Card.Body>
         <Card.Footer>
-          <NewMessage newMessage={this.newMessage}/>
+          <NewMessage newMessage={this.newMessage} />
         </Card.Footer>
       </Card>
 
