@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Card, Form, Button } from 'react-bootstrap'
 import Conversation from './Conversation'
 import NewMessage from './NewMessage';
+
 export default class ExampleContainer extends Component {
 
   // constructor(props) {
@@ -20,6 +21,7 @@ export default class ExampleContainer extends Component {
   }
   render() {
     return(
+
       <Card style={{ width: '20rem' }}>
         <Card.Header>Finbot</Card.Header>
         <Card.Body>
@@ -29,6 +31,7 @@ export default class ExampleContainer extends Component {
           <NewMessage newMessage={this.newMessage}/>
         </Card.Footer>
       </Card>
+
   )
 }
 }
