@@ -14,7 +14,8 @@
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "uuid": "^7.0.2"
   },
   "jest": {
     "setupFilesAfterEnv": [
