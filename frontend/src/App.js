@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Greeting from './components/greeting/Greeting'
+import Header from './components/header/Header'
+import Header2 from './components/header/Header2'
+import Chatbot from './components/chatbot/Chatbot'
+import ThemeSwitcher from './ThemeSwitcher'
+import Draggable from 'react-draggable';
+// eslint-disable-next-line
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,12 +15,19 @@ import {
 import './App.css';
 
 
-function App() {
+export default class App extends Component {
+
+  render() {
   return (
-    <div className="App">
-      <Greeting />
-    </div>
+    <Router>
+      <div className="App">
+        <Header2 />
+        <Greeting />
+        <Chatbot />
+      </div>
+    </Router>
   );
+  }
 }
 
-export default App;
+
