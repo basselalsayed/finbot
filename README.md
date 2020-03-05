@@ -35,7 +35,7 @@ Bassel Al-Sayed
 - Language: Javascript
 - Testing framework
     - End-to-end integration tests: Cypress
-    - Unit tests: Jest
+    - Unit tests: Jest, Enzyme
 - Networking: axios (for GET/POST requests to API)
 
 ### API
