@@ -1,13 +1,11 @@
 import React from 'react';
-import container from './container.css';
+// import container from './container.css';
+import { Container } from 'semantic-ui-react'
 
-export default function Container() {
+const ExampleContainer = () => (
+  <Container>
+    <p> container test</p>
+  </Container>
+)
 
-  return(
-    <div className='container'>
-      <p>
-        Test bot
-      </p>
-    </div>
-  )
-}
+export default ExampleContainer;

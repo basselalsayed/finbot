@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Container from './components/Container'
+import ExampleContainer from './components/Container'
 
 export default class Chatbot extends Component {
   state = {
@@ -8,7 +8,7 @@ export default class Chatbot extends Component {
 
   render(){
     return(
-      <Container />
+      <ExampleContainer />
     )
   }
 }

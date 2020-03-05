@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Greeting from './components/greeting/Greeting'
 import Header from './components/header/Header'
+import Header2 from './components/header/Header2'
 import Chatbot from './components/chatbot/Chatbot'
+import ThemeSwitcher from './ThemeSwitcher'
 // eslint-disable-next-line
 import {
   BrowserRouter as Router,
@@ -17,7 +19,7 @@ export default class App extends Component {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header2 />
         <Greeting />
         <Chatbot />
       </div>
