@@ -15,27 +15,37 @@ class Form extends React.Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
-    // this.apiCall()
   }
 
-  apiCall = () => {
-    console.log(this.state.value)
+  apiCallPost = () => {
+    const userInput = {
+      text: this.state.value
+    }
+
     axios
-    .post('http://localhost:8000/greetings', this.state.value)
+    .post('http://localhost:8000/api/user_input/', userInput)
+  };
+
+  apiCallGet = () => {
+    axios
+    .get('http://localhost:8000/api/')
     .then(res => this.setState({ response: res.data }))
   };
 
   handleSubmit(event) {
-    console.log('submitted')
     event.preventDefault();
-    this.apiCall()
+    this.apiCallPost()
+    setTimeout(() => {
+      this.apiCallGet()
+    }, 3000);
+
   }
 
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label> {this.state.response}
+        <label> {this.state.response} <br></br>
           <input className='input-name' type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
         <input className='input-btn' type="submit" value="Submit" />
