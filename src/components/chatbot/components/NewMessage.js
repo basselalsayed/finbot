@@ -27,10 +27,13 @@ export default class NewMessage extends Component {
     e.preventDefault();
     this.apiCallPost()
     this.props.newMessage(this.state);
+    this.props.loading();
     this.setState({content: '', type: 'send'})
     setTimeout(() => {
+      this.props.loading();
       this.props.apiCallGet()
-    }, 3000);  }
+    }, (Math.random() * 3000))  
+  }
   
   render() {
     return (
@@ -48,6 +51,7 @@ export default class NewMessage extends Component {
 NewMessage.propTypes = {
   newMessage: PropTypes.func.isRequired,
   apiCallGet: PropTypes.func.isRequired,
+  loading: PropTypes.func.isRequired
 }
 
 
