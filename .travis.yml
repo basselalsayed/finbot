@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- stable
+deploy:
+  provider: heroku
+  api_key:
+    secure: Rz4Tf2nHqYRoD5QjMOkykbHaxZtU8jJBZaguTMIYIPE40Fw9fRpA0WP4UPndwf1+zplVTtTIL4D2Kiqxc0zwmxUCAVYetEvfKQvy9XNeBIZcASvGE5DWbUtzig09HqMu+TodDJfrJ9oItzS2TovOinXW0IlyUWOoFp3gorCas2Cr7qWzaUgZhRcMBNb5f0ScwIxiqsUidg5VUN2i35GAoK0Sekw7XGbLa2lhACuRKHsT3o29q1oFAMIPsDl4ZsEvYhS9kK56WgKcrNkGb2xoiXs9dWn++y+F/4gJXcvQJ8l8SF/+8rYuc2GooiJsGcn5yreaJ+nDp27b0ToZaVMYTaCvsmzYhtCapj0f2Ko7C8icb9xIrZ4ZlCgvRL4sJ2VyhF4skR9qLR75/gzA4TJC/KU8SUUm2vEkvZysP5bdEYrTFbaknt6xEwidq4V76PjYRZaZZmAGOK0vwtTxFeB/wHjwHhKoFGupYFNC7uSsJ3BZaTNjblMSQMad8f2L7CYDnGNYBJbJS1nYOn4VkXW4hetmptsiRRsuvCER34CKxV06HE9trWF59Ie6901oyA6VffLciXVDlS7Bnq7TaGQVDs4FZqPAr/4GSzksdJ6ANKIgQSxD1GgQ2d7quzmbpm2F+evnM9iHdBkBAUInkKZRPEE7MtYvZB+pf3sMNE64lTI=
+  app: finbot-fe
+  on:
+    repo: basselalsayed/finbot
+  skip_cleanup: true
+
+  
