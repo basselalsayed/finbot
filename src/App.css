@@ -9,6 +9,18 @@
   align-self: stretch;
 } */
 
+.card-text {
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  width: 75%;
+  display: flexbox;
+}
+
+.card-body {
+  overflow-y: auto;
+  height: 500px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -44,3 +56,4 @@
     transform: rotate(360deg);
   }
 }
+

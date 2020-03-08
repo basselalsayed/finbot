@@ -6,8 +6,12 @@ export default class Message extends Component {
 
   getStyle = (type) => {
     console.log(type)
-      return { color: (type === 'response') ? 'blue' : 'red' }
+      return { backgroundColor: (type === 'response') ? 'olivedrab' : 'lightslategray',
+              textAlign: (type === 'response') ? 'left' : 'right',
+              float: (type === 'response') ? 'left' : 'right',
+    }
   }
+
 
   render() {
       const {content, type} = this.props.message
