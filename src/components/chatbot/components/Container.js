@@ -54,8 +54,8 @@ export default class ExampleContainer extends Component {
       <Card style={{ width: '20rem' }}>
         <Card.Header>Finbot</Card.Header>
         <Card.Body>
-          { this.state.loading ? <Loading /> : null }
           <Conversation messages={this.state.messages} />
+          { this.state.loading ? <Loading /> : null }
         </Card.Body>
         <Card.Footer>
           <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
