@@ -6,7 +6,7 @@ export default class Chatbot extends Component {
 
   }
 
-  render(){
+  render() {
     return(
       <ExampleContainer />
     )
