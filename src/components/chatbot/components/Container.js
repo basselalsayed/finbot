@@ -57,13 +57,13 @@ export default class ExampleContainer extends Component {
     const { showBot } = this.state;
     if (showBot) {
       return (
-        <Card style={{ width: '20rem',
+        <Card style={{ width: '25rem',
                        position: "absolute",
                        bottom: 0,
                        right: 10,
                        zIndex: 1000,
          }} id='chat-window' >
-          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>Finbot</Card.Header>
+          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
             { this.state.loading ? <Loading /> : null }

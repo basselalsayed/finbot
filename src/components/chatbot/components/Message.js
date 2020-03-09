@@ -5,31 +5,15 @@ import PropTypes from 'prop-types'
 export default class Message extends Component {
 
   getStyle = (type) => {
-      return { backgroundColor: (type === 'response') ? 'olivedrab' : 'lightslategray',
+      return { backgroundColor: (type === 'response') ? '#08AEEA' : '#ebecee',
               textAlign: (type === 'response') ? 'left' : 'right',
               float: (type === 'response') ? 'left' : 'right',
+              color: (type === 'response') ? 'white' : 'black',
     }
   }
 
-  splitLinks = (content) => {
-    // <a href={link}>{link}</a>
-    const links = content
-    const updatedLinks = []
-
-    Object.keys(links).map(function(key) {
-      return [key, links[key]];
-    });
-    
-    // for (var key in links) {
-    //   if(links.hasOwnProperty(key)) {
-    //     return <a href={links[key]}>{key}</a>
-    //     // console.log(key + "-->" + links[key])
-    //   }
-    // }
-
-    return updatedLinks.join()
-  }
   render() {
+
       const {content, type} = this.props.message
       if (typeof content == 'string') {
         return (
@@ -41,6 +25,7 @@ export default class Message extends Component {
           <Card.Text style={this.getStyle(type)} >
             <Card.Link href={Object.values(content)[0]} >{ Object.keys(content)[0] }</Card.Link>
             <Card.Link href={Object.values(content)[1]} >{ Object.keys(content)[1] }</Card.Link>
+            <Card.Link href={Object.values(content)[2]} >{ Object.keys(content)[2] }</Card.Link>
           </Card.Text>
           <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
           </div>

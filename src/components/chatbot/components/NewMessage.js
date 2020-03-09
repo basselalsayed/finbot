@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Form, Button, Container } from 'react-bootstrap'
 import axios from 'axios'
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class NewMessage extends Component {
   constructor(props) {
@@ -12,7 +14,10 @@ export default class NewMessage extends Component {
       type: 'send'
     }
   }
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+    this.setStyle()
+  }
 
   apiCallPost = () => {
     const userInput = {
@@ -34,6 +39,11 @@ export default class NewMessage extends Component {
       this.props.apiCallGet()
     }, (Math.random() * 3000))  
   }
+
+  setStyle = (type) => {
+    return { backgroundColor:'#08AEEA'}
+  }
+
   
   render() {
     return (
@@ -41,7 +51,7 @@ export default class NewMessage extends Component {
         <Form.Group controlId="formBasicEmail">
           <Form.Control name='content' type="text" value={this.state.content} onChange={this.onChange} placeholder="Ask me anything" />
           <Button variant='primary' type='submit'>
-            Send
+            <FontAwesomeIcon icon={faChevronCircleRight} />
           </Button>
         </Form.Group>
       </Form>
