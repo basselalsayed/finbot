@@ -57,9 +57,13 @@ export default class ExampleContainer extends Component {
     const { showBot } = this.state;
     if (showBot) {
       return (
-        <div>
-        <Card style={{ width: '20rem' }} id='chat-window' >
-          <Card.Header>Finbot</Card.Header>
+        <Card style={{ width: '20rem',
+                       position: "absolute",
+                       bottom: 0,
+                       right: 10,
+                       zIndex: 1000,
+         }} id='chat-window' >
+          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>Finbot</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
             { this.state.loading ? <Loading /> : null }
@@ -68,12 +72,6 @@ export default class ExampleContainer extends Component {
             <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
           </Card.Footer>
         </Card>
-        <nav onClick={this.toggleBot}>
-            <div id="chat-window-btn" data-toggle="chat-window" >
-              <FontAwesomeIcon icon={faCommentDots} />
-            </div>
-          </nav>
-        </div>
       )
     } else {
       return (
@@ -85,6 +83,7 @@ export default class ExampleContainer extends Component {
             right: 0,
             zIndex: 1000,
             fontSize: '50px',
+            cursor: 'pointer',
           }}
         >
           <nav onClick={this.toggleBot}>

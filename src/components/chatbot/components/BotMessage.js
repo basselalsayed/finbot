@@ -12,5 +12,3 @@ export default class BotMessage extends Component {
     )
   }
 }
-
-
