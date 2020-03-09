@@ -27,14 +27,18 @@ export default class ExampleContainer extends Component {
   }
 
   apiCallGet = () => {
+    const url = 'http://localhost:8000/api/'
     axios
-      .get('http://localhost:8000/api/')
-      .then(res => this.newMessage(
+      .get(url)
+      .then((res) => {
+        console.log('response', res.data);
+        this.newMessage(
         { 
           content: res.data,
           type: 'response'
         }
-      )) 
+      )})
+      .catch(() => console.log("Can’t access " + url + " response.")) 
   };
 
   newMessage = (message) => {
