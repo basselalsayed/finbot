@@ -3,6 +3,7 @@ import Greeting from './components/greeting/Greeting'
 import Header from './components/header/Header'
 import Header2 from './components/header/Header2'
 import Chatbot from './components/chatbot/Chatbot'
+import News from './components/news/News'
 import ThemeSwitcher from './ThemeSwitcher'
 import Draggable from 'react-draggable';
 // eslint-disable-next-line
@@ -22,8 +23,8 @@ export default class App extends Component {
     <Router>
       <div className="App">
         <Header2 />
-        {/* <Greeting /> */}
         <Chatbot />
+        <News />
       </div>
     </Router>
   );
