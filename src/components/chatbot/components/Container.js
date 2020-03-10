@@ -23,20 +23,35 @@ export default class ExampleContainer extends Component {
       }
     ],
     showBot: true,
+    timer: 0
   }
 
   toggleBot = () => {
-    this.setState({ showBot: !this.state.showBot });
+    this.setState({ showBot: !this.state.showBot })
   }
 
   listen = (e) => {
-    window.addEventListener(e, console.log('event'))
+    
+    window.addEventListener(e, this.stopTimer())
   }
 
- 
+  startTimer = () => {
+   this.timer = setInterval(() => {
+    console.log('timer')
+   }, 5000)
+  }
 
- 
+  stopTimer = () => {
+    clearInterval(this.timer)
+    console.log('stop timer')
+  }
 
+  
+
+  componentDidMount() {
+   this.startTimer()
+  }
+ 
   loading = () => {
     this.setState({ loading: !this.state.loading })
   }
@@ -79,7 +94,7 @@ export default class ExampleContainer extends Component {
           </Card.Body>
           { this.state.loading ? <Loading /> : null }
           <Card.Footer>
-            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
+            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} starTimer={this.startTimer} />
           </Card.Footer>
         </Card>
       )
