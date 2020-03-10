@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Greeting from './components/greeting/Greeting'
 import Header from './components/header/Header'
+import Welcome from './components/welcome/Welcome'
 import Header2 from './components/header/Header2'
 import Chatbot from './components/chatbot/Chatbot'
 import News from './components/news/News'
@@ -23,6 +24,8 @@ export default class App extends Component {
     <Router>
       <div className="App">
         <Header2 />
+        {/* <Welcome /> */}
+        {/* <Greeting /> */}
         <Chatbot />
         <News />
       </div>

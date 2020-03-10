@@ -57,17 +57,22 @@ export default class ExampleContainer extends Component {
     const { showBot } = this.state;
     if (showBot) {
       return (
+<<<<<<< HEAD
         <Card style={{ width: '70%',
+=======
+        <Card style={{ width: '25rem',
+>>>>>>> origin
                        position: "absolute",
                        bottom: 0,
                       //  right: 10,
                        zIndex: 1000,
          }} id='chat-window' >
-          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>Finbot</Card.Header>
+          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
-            { this.state.loading ? <Loading /> : null }
+            {/* { this.state.loading ? <Loading /> : null } */}
           </Card.Body>
+          { this.state.loading ? <Loading /> : null }
           <Card.Footer>
             <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
           </Card.Footer>
