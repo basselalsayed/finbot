@@ -14,7 +14,7 @@ export default class ExampleContainer extends Component {
     loading: false,
     messages: [
       {
-        content: 'hello, whats your name?',
+        content: "Howdy there, partner! I'm Ubb, nice to meet you. You can ask me anything about personal finance. If you would like a list of topics that I can tell you about, type 'help'. Beep, boop, bop. 🤖",
         type: 'response'
       }, 
       {
@@ -85,7 +85,7 @@ export default class ExampleContainer extends Component {
                        zIndex: 1000,
          }} id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
 
-          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
+          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}> 🤖 ubb</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
             {/* { this.state.loading ? <Loading /> : null } */}
