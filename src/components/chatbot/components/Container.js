@@ -31,22 +31,20 @@ export default class ExampleContainer extends Component {
   }
 
   listen = (e) => {
-    
     window.addEventListener(e, this.stopTimer())
   }
 
   startTimer = () => {
-   this.timer = setInterval(() => {
-    console.log('timer')
-   }, 5000)
+   this.timer = setTimeout(() => {
+    axios
+      .post('http://localhost:8000/api/user_input/', { text: 'help' })
+    this.apiCallGet()
+   }, 60000)
   }
 
   stopTimer = () => {
-    clearInterval(this.timer)
-    console.log('stop timer')
+    clearTimeout(this.timer)
   }
-
-  
 
   componentDidMount() {
    this.startTimer()
@@ -94,7 +92,7 @@ export default class ExampleContainer extends Component {
           </Card.Body>
           { this.state.loading ? <Loading /> : null }
           <Card.Footer>
-            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} starTimer={this.startTimer} />
+            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} startTimer={this.startTimer} />
           </Card.Footer>
         </Card>
       )
