@@ -5,15 +5,38 @@ import PropTypes from 'prop-types'
 export default class Message extends Component {
 
   getStyle = (type) => {
-    console.log(type)
-      return { color: (type === 'response') ? 'blue' : 'red' }
+      return { backgroundColor: (type === 'response') ? '#08AEEA' : '#ebecee',
+              textAlign: (type === 'response') ? 'left' : 'right',
+              float: (type === 'response') ? 'left' : 'right',
+              color: (type === 'response') ? 'white' : 'black',
+    }
   }
 
   render() {
+
       const {content, type} = this.props.message
-      return (
-      <Card.Text style={this.getStyle(type)}>{ content }</Card.Text>
-    )
+      if (typeof content == 'string') {
+        return (
+          <Card.Text style={this.getStyle(type)}>{ content }</Card.Text>
+        )
+      } else {
+        return (
+          <div>
+          <Card.Text style={this.getStyle(type)} >
+            <ul>
+              <li><Card.Link href={Object.values(content)[0]} >{ Object.keys(content)[0] }</Card.Link></li>
+              <li><Card.Link href={Object.values(content)[1]} >{ Object.keys(content)[1] }</Card.Link></li>
+              <li><Card.Link href={Object.values(content)[2]} >{ Object.keys(content)[2] }</Card.Link></li>
+            </ul>
+          </Card.Text>
+          <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
+          </div>
+
+          // <Card.Link style={this.getStyle(type)} href={Object.keys(links[1])[0]} >{ Object.values(links[1])[0] }</Card.Link>
+          // <Card.Text style={this.getStyle(type)} >{ content }</Card.Text>
+        )
+      }
+      
   }
 }
 
