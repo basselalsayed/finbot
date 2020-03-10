@@ -66,8 +66,9 @@ export default class ExampleContainer extends Component {
           <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
-            { this.state.loading ? <Loading /> : null }
+            {/* { this.state.loading ? <Loading /> : null } */}
           </Card.Body>
+          { this.state.loading ? <Loading /> : null }
           <Card.Footer>
             <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
           </Card.Footer>

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Mono);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
@@ -40,6 +40,19 @@ body {
   height: 500px;
 }
 
+.card-link {
+  color: white;
+  text-decoration-line: underline;
+  /* font-weight: 700; */
+}
+
+ul {
+  padding: 0 15px 0  0 ;
+}
+
+li {
+  padding: 5px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -131,3 +144,33 @@ body {
   animation-delay: 666ms
 }
 
+.welcome {
+  font-size: 150px;
+  color: white;
+  opacity: 85%;
+  text-align: center;
+  font-family: 'Roboto Mono';
+  width: 90%;
+  font-weight: 700;
+}
+
+.welcome span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #1d1f20;
+	width: 100%;
+	border-left: .1em solid transparent;
+	-webkit-animation: typing 3s steps(16) forwards;
+	animation: typing 3s steps(16) forwards;
+}
+/* Animation */
+@-webkit-keyframes typing{
+	from { width: 100%;}
+	to { width: 0;}
+}
+
+@keyframes typing{
+	from{ width: 100%;}
+	to{ width: 0;}
+}

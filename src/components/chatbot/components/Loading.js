@@ -6,9 +6,9 @@ import ReactLoading from 'react-loading'
 //   <ReactLoading type='bubbles' color='blue' height={100} width={50} />
 // );
 
-export default class Loading extends Component {
+export const Loading = () => {
 
-  render() {
+
     return (
       <div className="typing">
         <span className="circle"></span>
@@ -16,9 +16,9 @@ export default class Loading extends Component {
         <span className="circle"></span>
       </div>
   )
-  }
+  
   
 }
 
 
-// export default Loading;
+export default Loading;

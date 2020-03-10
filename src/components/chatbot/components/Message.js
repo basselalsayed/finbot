@@ -23,9 +23,11 @@ export default class Message extends Component {
         return (
           <div>
           <Card.Text style={this.getStyle(type)} >
-            <Card.Link href={Object.values(content)[0]} >{ Object.keys(content)[0] }</Card.Link>
-            <Card.Link href={Object.values(content)[1]} >{ Object.keys(content)[1] }</Card.Link>
-            <Card.Link href={Object.values(content)[2]} >{ Object.keys(content)[2] }</Card.Link>
+            <ul>
+              <li><Card.Link href={Object.values(content)[0]} >{ Object.keys(content)[0] }</Card.Link></li>
+              <li><Card.Link href={Object.values(content)[1]} >{ Object.keys(content)[1] }</Card.Link></li>
+              <li><Card.Link href={Object.values(content)[2]} >{ Object.keys(content)[2] }</Card.Link></li>
+            </ul>
           </Card.Text>
           <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
           </div>
