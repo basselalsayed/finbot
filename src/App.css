@@ -9,6 +9,18 @@
   align-self: stretch;
 } */
 
+.card-text {
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  width: 75%;
+  display: flexbox;
+}
+
+.card-body {
+  overflow-y: auto;
+  height: 500px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -43,4 +55,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.typing {
+  display: block;
+  width: 60px;
+  height: 40px;
+  background-color: #BDBDBD;
+  margin-left: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #757575;
+  margin: 3px;
+  animation: bounce 1000ms ease-in-out;
+}
+
+.circle:nth-child(1){
+  animation-delay: 0ms
+}
+  
+.circle:nth-child(2) {
+  animation-delay: 333ms
+}
+
+.circle:nth-child(3) {
+  animation-delay: 666ms
 }
