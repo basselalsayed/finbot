@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 
 export default class Article extends Component {
   render() {
+    const { story } = this.props
     return (
-     <Card.text>
+     <Card.Text>
      {/* I think this is wrong path to headline/story content*/}
-      {this.props.story} 
-     </Card.text>
+      {story} 
+     </Card.Text>
     )
   }
 }

@@ -14,14 +14,11 @@ export default class Articles extends Component {
   }
 
   apiCallGet = () => {
-    const url = 'http://newsapi.org/v2/business?' +
-                'apiKey=';
+    const url = 'http://newsapi.org/v2/top-headlines?country=gb&category=business&' +
+                'apiKey=c883f717ea02425f9adda874534fee3f';
     axios
       .get(url)
-      .then(res => {
-        console.log(res.data);
-        this.setState({ stories: res.data.articles })
-      })
+      .then(res => this.setState({ stories: res.data.articles }))
   };
 
   render() {

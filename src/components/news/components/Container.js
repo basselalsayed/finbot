@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Card } from 'react-bootstrap'
 import Articles from './Articles'
 
-export class Container extends Component {
+export default class Container extends Component {
   render() {
     return (
       <Fragment>
@@ -15,4 +15,4 @@ export class Container extends Component {
   }
 }
 
-export default Container
+
