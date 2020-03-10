@@ -57,11 +57,7 @@ export default class ExampleContainer extends Component {
     const { showBot } = this.state;
     if (showBot) {
       return (
-<<<<<<< HEAD
         <Card style={{ width: '70%',
-=======
-        <Card style={{ width: '25rem',
->>>>>>> origin
                        position: "absolute",
                        bottom: 0,
                       //  right: 10,
