@@ -22,13 +22,20 @@ export default class ExampleContainer extends Component {
         type: 'send'
       }
     ],
-    showBot: false,
+    showBot: true,
   }
 
   toggleBot = () => {
     this.setState({ showBot: !this.state.showBot });
   }
 
+  listen = (e) => {
+    window.addEventListener(e, console.log('event'))
+  }
+
+ 
+
+ 
 
   loading = () => {
     this.setState({ loading: !this.state.loading })
@@ -54,6 +61,7 @@ export default class ExampleContainer extends Component {
   }
 
   render() {
+  
     const { showBot } = this.state;
     if (showBot) {
       return (
@@ -62,7 +70,8 @@ export default class ExampleContainer extends Component {
                        bottom: 0,
                        right: 10,
                        zIndex: 1000,
-         }} id='chat-window' >
+         }} id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
+
           <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
