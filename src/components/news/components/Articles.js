@@ -22,8 +22,9 @@ export default class Articles extends Component {
   };
 
   render() {
-    return this.state.stories.map((story) => (
-      <Article key={uuid.v4()} story={story} />
+    return this.state.stories.slice(0, 5).map((story) => (
+      // console.log(story)
+        <Article key={uuid.v4()} story={story} />
     ))
   }
 }

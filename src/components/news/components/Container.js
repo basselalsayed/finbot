@@ -5,7 +5,7 @@ import Articles from './Articles'
 export default class Container extends Component {
   render() {
     return (
-      <Fragment>
+      <Fragment id='news-api'>
         <Card.Header> 
           Financial News 
         </Card.Header>
