@@ -8,6 +8,8 @@ import axios from 'axios';
 export default class ExampleContainer extends Component {
   state = {
     loading: false,
+    showBot: true,
+    timer: 0,
     messages: [
       {
         content:
@@ -19,9 +21,6 @@ export default class ExampleContainer extends Component {
         type: 'send',
       },
     ],
-    showBot: true,
-
-    timer: 0,
   };
 
   toggleBot = () => {
