@@ -9,4 +9,11 @@ describe('User inputs', function() {
       expect(text).to.contain.oneOf([`${welcome}HiHello!`, `${welcome}HiGood to see you again!`, `${welcome}HiHi there, how can I help?`])
     })
   })
+
+  it("'budgeting', and bot displays the response", function() {
+    cy.visit('/')
+    cy.get('#formBasicEmail').type('budgeting')
+    cy.get('button.btn.btn-primary').click()
+    cy.contains('A budget is essential to living within your means')
+  })
 })
