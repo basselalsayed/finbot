@@ -174,3 +174,66 @@ li {
 	from{ width: 100%;}
 	to{ width: 0;}
 }
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}
+
+#btn-show-bot {
+  /* float: left; */
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  font-family: 'Roboto Mono';
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  background: rgba(30, 144, 255, 0.6);
+  border-radius: 50%;
+  animation: shadow-pulse 2s infinite;
+  /* float: right; */
+}
+
+/* #chat-window {
+  width: 50%;
+  position: absolute;
+  bottom: 10;
+  right: 10;
+} */
+
+#chat-window {
+  width: 25rem;
+  /* position: absolute; */
+  bottom: 10;
+  /* right: 10; */
+  margin: auto;
+}
+
+.chat-window-btn {
+  width: 450;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* z-index: 1000; */
+  font-size: '50px';
+  cursor: 'pointer';
+  width: 100%;
+  /* flex: left; */
+}

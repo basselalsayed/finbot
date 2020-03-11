@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-// import container from './container.css';
 import { Card, Form, Button } from 'react-bootstrap'
 import Conversation from './Conversation'
 import Loading from './Loading'
 import NewMessage from './NewMessage';
 import axios from 'axios'
-import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class ExampleContainer extends Component {
 
@@ -78,17 +75,10 @@ export default class ExampleContainer extends Component {
     const { showBot } = this.state;
     if (showBot) {
       return (
-        <Card style={{ width: '25rem',
-                       position: "absolute",
-                       bottom: 0,
-                       right: 10,
-                       zIndex: 1000,
-         }} id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
-
+        <Card id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
           <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}> 🤖 ubb</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
-            {/* { this.state.loading ? <Loading /> : null } */}
           </Card.Body>
           { this.state.loading ? <Loading /> : null }
           <Card.Footer>
@@ -98,22 +88,8 @@ export default class ExampleContainer extends Component {
       )
     } else {
       return (
-        <div
-          style={{
-            width: 450,
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            zIndex: 1000,
-            fontSize: '50px',
-            cursor: 'pointer',
-          }}
-        >
-          <nav onClick={this.toggleBot}>
-            <div id="chat-window-btn" data-toggle="chat-window" >
-              <FontAwesomeIcon icon={faCommentDots} />
-            </div>
-          </nav>
+        <div className="chat-window-btn" data-toggle="chat-window" onClick={this.toggleBot}>
+          <Button id='btn-show-bot'>CHAT</Button>
         </div>
       )
     }
