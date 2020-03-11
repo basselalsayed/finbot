@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
@@ -51,11 +51,12 @@ export default class Message extends Component {
             </ul>
           </Card.Text>
 
-          <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
-          </div>
-        )
-      }
-      
+          <Card.Text style={this.getStyle(type)}>
+            Is there another topic I can help you with today?
+          </Card.Text>
+        </div>
+      );
+    }
   }
 }
 
