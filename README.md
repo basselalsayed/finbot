@@ -50,7 +50,7 @@ Bassel Al-Sayed
 - Servers: Heroku
 
 ## Design
-The user can interact with the chatbot. When the user inputs text, an HTTP request is sent to the API to fetch a response through axiom. The API then receives the user input, parses the text through the Natural Language Processing model, and generates JSON bot responses.
+The user can interact with the chatbot. When the user inputs text, an HTTP request is sent to the API to fetch a response through axios. The API then receives the user input, parses the text through the Natural Language Processing model, and generates JSON bot responses.
 
 
 ## Get started
