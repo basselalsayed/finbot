@@ -14,7 +14,7 @@ export default class ExampleContainer extends Component {
     loading: false,
     messages: [
       {
-        content: 'hello, whats your name?',
+        content: "Howdy there, partner! I'm Ubb, nice to meet you. You can ask me anything about personal finance. If you would like a list of topics that I can tell you about, type 'help'. Beep, boop, bop. 🤖",
         type: 'response'
       }, 
       {
@@ -22,14 +22,34 @@ export default class ExampleContainer extends Component {
         type: 'send'
       }
     ],
-    showBot: false,
+    showBot: true,
+    timer: 0
   }
 
   toggleBot = () => {
-    this.setState({ showBot: !this.state.showBot });
+    this.setState({ showBot: !this.state.showBot })
   }
 
+  listen = (e) => {
+    window.addEventListener(e, this.stopTimer())
+  }
 
+  startTimer = () => {
+   this.timer = setTimeout(() => {
+    axios
+      .post('http://localhost:8000/api/user_input/', { text: 'help' })
+    this.apiCallGet()
+   }, 60000)
+  }
+
+  stopTimer = () => {
+    clearTimeout(this.timer)
+  }
+
+  componentDidMount() {
+   this.startTimer()
+  }
+ 
   loading = () => {
     this.setState({ loading: !this.state.loading })
   }
@@ -54,6 +74,7 @@ export default class ExampleContainer extends Component {
   }
 
   render() {
+  
     const { showBot } = this.state;
     if (showBot) {
       return (
@@ -62,15 +83,16 @@ export default class ExampleContainer extends Component {
                        bottom: 0,
                        right: 10,
                        zIndex: 1000,
-         }} id='chat-window' >
-          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}>UB</Card.Header>
+         }} id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
+
+          <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}> 🤖 ubb</Card.Header>
           <Card.Body>
             <Conversation messages={this.state.messages} />
             {/* { this.state.loading ? <Loading /> : null } */}
           </Card.Body>
           { this.state.loading ? <Loading /> : null }
           <Card.Footer>
-            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} />
+            <NewMessage loading={this.loading} newMessage={this.newMessage} apiCallGet={this.apiCallGet} startTimer={this.startTimer} />
           </Card.Footer>
         </Card>
       )
