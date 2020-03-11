@@ -50,7 +50,7 @@ export default class NewMessage extends Component {
     return (
       <Form onSubmit={this.onSubmit} inline>
         <Form.Group controlId="formBasicEmail">
-          <Form.Control name='content' type="text" value={this.state.content} onChange={this.onChange} placeholder="Ask me anything" />
+          <Form.Control name='content' type="text" value={this.state.content} onChange={this.onChange} placeholder="Ask me anything" autoComplete="off"/>
           <Button variant='primary' type='submit'>
             <FontAwesomeIcon icon={faChevronCircleRight} />
           </Button>
