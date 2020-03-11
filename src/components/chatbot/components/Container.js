@@ -20,7 +20,9 @@ export default class ExampleContainer extends Component {
       }
     ],
     showBot: true,
+
     timer: 0
+
   }
 
   toggleBot = () => {
@@ -59,7 +61,8 @@ export default class ExampleContainer extends Component {
           content: res.data,
           type: 'response'
         }
-      )) 
+      ) 
+    )
   };
 
   newMessage = (message) => {
