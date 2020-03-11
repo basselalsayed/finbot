@@ -20,9 +20,7 @@ export default class ExampleContainer extends Component {
       }
     ],
     showBot: true,
-
     timer: 0
-
   }
 
   toggleBot = () => {
