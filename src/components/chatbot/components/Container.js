@@ -13,10 +13,6 @@ export default class ExampleContainer extends Component {
       {
         content: "Howdy there, partner! I'm Ubb, nice to meet you. You can ask me anything about personal finance. If you would like a list of topics that I can tell you about, type 'help'. Beep, boop, bop. 🤖",
         type: 'response'
-      }, 
-      {
-        content: 'hey',
-        type: 'send'
       }
     ],
     showBot: true,
