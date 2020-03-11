@@ -34,6 +34,7 @@ export default class NewMessage extends Component {
     this.props.newMessage(this.state);
     this.props.loading();
     this.setState({content: '', type: 'send'})
+    this.props.startTimer();
     setTimeout(() => {
       this.props.loading();
       this.props.apiCallGet()
