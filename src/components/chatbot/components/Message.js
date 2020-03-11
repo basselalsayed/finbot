@@ -31,9 +31,6 @@ export default class Message extends Component {
           </Card.Text>
           <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
           </div>
-
-          // <Card.Link style={this.getStyle(type)} href={Object.keys(links[1])[0]} >{ Object.values(links[1])[0] }</Card.Link>
-          // <Card.Text style={this.getStyle(type)} >{ content }</Card.Text>
         )
       }
       
