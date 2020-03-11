@@ -16,4 +16,11 @@ describe('User inputs', function() {
     cy.get('button.btn.btn-primary').click()
     cy.contains('A budget is essential to living within your means')
   })
+
+  it("'income', and bot displays the response", function() {
+    cy.visit('/')
+    cy.get('#formBasicEmail').type('income')
+    cy.get('button.btn.btn-primary').click()
+    cy.contains("Income is money (or some equivalent value) that an individual or business receives")
+  })
 })
