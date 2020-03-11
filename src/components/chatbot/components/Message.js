@@ -16,9 +16,9 @@ export default class Message extends Component {
     const { content, type } = this.props.message;
     if (typeof content === 'string') {
       return <Card.Text style={this.getStyle(type)}>{content}</Card.Text>;
-    } else if (typeof content === 'object') {
+    } else if (typeof content === 'object' && content["title"] !== undefined) {
       return (
-        <Card.Text style={this.getStyle(type)}>
+        <Card.Text style={this.getStyle(type)} >
           <h2>{content.title}</h2>
           <p>{content.body}</p>
           <ul>
@@ -31,10 +31,10 @@ export default class Message extends Component {
     } else {
       return (
         <div>
-          <Card.Text style={this.getStyle(type)}>
+          <Card.Text style={this.getStyle(type)} >
             <ul>
               <li>
-                <Card.Link href={Object.values(content)[0]}>
+                <Card.Link href={Object.values(content)[0]} target="_blank">
                   {Object.keys(content)[0]}
                 </Card.Link>
               </li>
@@ -57,6 +57,7 @@ export default class Message extends Component {
         </div>
       );
     }
+
   }
 }
 

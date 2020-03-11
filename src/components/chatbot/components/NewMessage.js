@@ -54,6 +54,7 @@ export default class NewMessage extends Component {
             value={this.state.content}
             onChange={this.onChange}
             placeholder="Ask me anything"
+            autoComplete="off"
           />
           <Button variant="primary" type="submit">
             <FontAwesomeIcon icon={faChevronCircleRight} />
