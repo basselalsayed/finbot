@@ -28,7 +28,6 @@ export default class App extends Component {
         <aside>
           <News />
         </aside>
-        
       </div>
     </Router>
   );
