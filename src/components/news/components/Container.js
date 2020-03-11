@@ -5,11 +5,15 @@ import Articles from './Articles'
 export default class Container extends Component {
   render() {
     return (
-      <Fragment id='news-api'>
-        <Card.Header> 
-          Financial News 
-        </Card.Header>
-        <Articles />
+      <Fragment >
+        <Card id='news-api'>
+          <Card.Header> 
+            Financial News 
+          </Card.Header>
+          <Card.Body id='articles'>
+            <Articles />
+          </Card.Body>
+        </Card>
       </Fragment>
     )
   }

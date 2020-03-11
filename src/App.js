@@ -24,10 +24,13 @@ export default class App extends Component {
     <Router>
       <div className="App">
         <Header2 />
-        {/* <Welcome /> */}
-        {/* <Greeting /> */}
-        <Chatbot />
-        <News />
+        <section>
+          <Chatbot />
+        </section>
+        <aside>
+          <News />
+        </aside>
+        
       </div>
     </Router>
   );

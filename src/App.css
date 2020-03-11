@@ -84,6 +84,23 @@ li {
   }
 }
 
+aside {
+  height: 100%;
+  width: 25%;
+  margin: 5% 1.5% 1.5% 0;
+  float: right;
+  bottom: 0;
+}
+
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 65%;
+}
+.news-api {
+  height: 100%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
