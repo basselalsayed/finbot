@@ -18,7 +18,7 @@ export default class Message extends Component {
       return <Card.Text style={this.getStyle(type)}>{content}</Card.Text>;
     } else if (typeof content === 'object') {
       return (
-        <Card.Text style={this.getStyle(type)}>
+        <Card.Text style={this.getStyle(type)} >
           <h2>{content.title}</h2>
           <p>{content.body}</p>
           <ul>
@@ -31,7 +31,7 @@ export default class Message extends Component {
     } else {
       return (
         <div>
-          <Card.Text style={this.getStyle(type)}>
+          <Card.Text style={this.getStyle(type)} >
             <ul>
               <li>
                 <Card.Link href={Object.values(content)[0]}>
@@ -51,7 +51,7 @@ export default class Message extends Component {
             </ul>
           </Card.Text>
 
-          <Card.Text style={this.getStyle(type)}>Is there another topic I can help you with today?</Card.Text>
+          <Card.Text style={this.getStyle(type)} >Is there another topic I can help you with today?</Card.Text>
           </div>
         )
       }

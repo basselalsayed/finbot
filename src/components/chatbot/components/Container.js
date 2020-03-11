@@ -43,10 +43,6 @@ export default class ExampleContainer extends Component {
     clearTimeout(this.timer)
   }
 
-  componentDidMount() {
-   this.startTimer()
-  }
- 
   loading = () => {
     this.setState({ loading: !this.state.loading })
   }
@@ -71,6 +67,11 @@ export default class ExampleContainer extends Component {
     this.setState({ messages: clone })
   }
 
+  scrollToBottom = () => {
+    let element = document.getElementById("chat-body");
+    element.scrollTo(0,element.scrollHeight)
+  }
+
   render() {
   
     const { showBot } = this.state;
@@ -78,8 +79,8 @@ export default class ExampleContainer extends Component {
       return (
         <Card id='chat-window' onClick={this.listen} onKeyPress={this.listen} onScroll={this.listen} >
           <Card.Header onClick={this.toggleBot} style={{cursor: 'pointer'}}> 🤖 ubb</Card.Header>
-          <Card.Body>
-            <Conversation messages={this.state.messages} />
+          <Card.Body id='chat-body'>
+            <Conversation messages={this.state.messages} scroll={this.scrollToBottom} />
           </Card.Body>
           { this.state.loading ? <Loading /> : null }
           <Card.Footer>

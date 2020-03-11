@@ -6,6 +6,10 @@ import PropTypes from 'prop-types'
 
 export default class Conversation extends Component {
 
+  componentDidUpdate = () => {
+    this.props.scroll()
+  }
+
   render() {
     return this.props.messages.map((message) => (
       <Message key={uuid.v4()} message={message} />
