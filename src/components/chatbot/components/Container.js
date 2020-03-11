@@ -22,7 +22,7 @@ export default class ExampleContainer extends Component {
         type: 'send'
       }
     ],
-    showBot: false,
+    showBot: true,
   }
 
   toggleBot = () => {
@@ -42,7 +42,8 @@ export default class ExampleContainer extends Component {
           content: res.data,
           type: 'response'
         }
-      )) 
+      ) 
+    )
   };
 
   newMessage = (message) => {

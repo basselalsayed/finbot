@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Card } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
@@ -15,9 +15,17 @@ export default class Message extends Component {
   render() {
 
       const {content, type} = this.props.message
-      if (typeof content == 'string') {
+      if (typeof content === 'string') {
         return (
           <Card.Text style={this.getStyle(type)}>{ content }</Card.Text>
+        )
+      } else if (typeof content === 'object') {
+        return (
+          <Card.Text style={this.getStyle(type)}>
+            <h2>{ content.title }</h2>
+            <p>{ content.body }</p>
+            <ul>{ content.list.map(item => ( <li>{ item }</li> )) }</ul>
+          </Card.Text>
         )
       } else {
         return (
@@ -42,6 +50,5 @@ export default class Message extends Component {
 
 Message.propTypes = {
   message: PropTypes.object.isRequired,
-  // type: PropTypes.string.isRequired
 }
 
