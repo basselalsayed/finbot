@@ -1,6 +1,12 @@
-import React, { Component } from 'react'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from 'react-bootstrap';
 
 export class Header2 extends Component {
   render() {
@@ -14,10 +20,14 @@ export class Header2 extends Component {
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form inline>
@@ -26,8 +36,8 @@ export class Header2 extends Component {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-    )
+    );
   }
 }
 
-export default Header2
+export default Header2;
