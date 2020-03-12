@@ -82,7 +82,7 @@ export default class ExampleContainer extends Component {
             {' '}
             🤖 ubb
           </Card.Header>
-          <Card.Body>
+          <Card.Body id='chat-body'>
             <Conversation messages={this.state.messages} scroll={this.scrollToBottom}/>
           </Card.Body>
           {this.state.loading ? <Loading /> : null}
