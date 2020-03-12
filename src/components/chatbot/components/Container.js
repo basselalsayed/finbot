@@ -67,7 +67,7 @@ export default class ExampleContainer extends Component {
 
   scrollToBottom = () => {
     let element = document.getElementById("chat-body");
-    element.scrollTo(0,element.scrollHeight)
+    element.scrollTo(0, element.scrollHeight)
   }
 
   render() {
@@ -75,7 +75,7 @@ export default class ExampleContainer extends Component {
     if (showBot) {
       return (
         <Card
-          id="chat-window"
+          id="chat-body"
           onClick={this.listen}
           onKeyPress={this.listen}
           onScroll={this.listen}
@@ -85,7 +85,7 @@ export default class ExampleContainer extends Component {
             🤖 ubb
           </Card.Header>
           <Card.Body>
-            <Conversation messages={this.state.messages} scroll={this.scrollToBottom}/>
+            <Conversation messages={this.state.messages} scroll={this.scrollToBottom} />
           </Card.Body>
           {this.state.loading ? <Loading /> : null}
           <Card.Footer>

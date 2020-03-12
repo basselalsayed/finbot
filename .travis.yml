@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - stable
+script:
+  - yarn run cypress:run
+
 deploy:
   provider: heroku
   api_key:
