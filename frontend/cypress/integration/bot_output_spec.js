@@ -38,19 +38,12 @@ describe("User inputs", function() {
     cy.contains("A budget is essential to living within your means");
   });
 
-  it("'budgeting', and bot displays the response", function() {
+  it("'student loans', and bot displays the response", function() {
     cy.visit("/");
-    cy.get("#formBasicEmail").type("budgeting");
-    cy.get("button.btn.btn-primary").click();
-    cy.contains("A budget is essential to living within your means");
-  });
-
-  it("'income', and bot displays the response", function() {
-    cy.visit("/");
-    cy.get("#formBasicEmail").type("income");
+    cy.get("#formBasicEmail").type("student loans");
     cy.get("button.btn.btn-primary").click();
     cy.contains(
-      "Income is money (or some equivalent value) that an individual or business receives"
+      "You start repaying your student loan once you earn over a certain amount"
     );
   });
 
