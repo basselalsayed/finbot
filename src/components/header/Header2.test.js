@@ -18,6 +18,6 @@ test('Header renders', () => {
 test('Header contains header html element', () => {
   expect(render(
     <Router>
-      <Header />
+      <Header2 />
     </Router>).text()).toEqual('FINBOT.') 
 })
