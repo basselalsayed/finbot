@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Image } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default class Article extends Component {

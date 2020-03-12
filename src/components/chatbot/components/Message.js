@@ -19,7 +19,7 @@ export default class Message extends Component {
     } else if (typeof content === 'object' && content["title"] !== undefined) {
       return (
         <Card.Text style={this.getStyle(type)} >
-          <h2>{content.title}</h2>
+          <h4>{content.title}</h4>
           <p>{content.body}</p>
           <ul>
             {content.list.map(item => (
