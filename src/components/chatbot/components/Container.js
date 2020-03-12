@@ -13,12 +13,8 @@ export default class ExampleContainer extends Component {
     messages: [
       {
         content:
-          "Howdy there, partner! I'm Ubb, nice to meet you. You can ask me anything about personal finance. If you would like a list of topics that I can tell you about, type 'help'. Beep, boop, bop. 🤖",
+          "Beep, boop, bop 🤖 Hi there, I'm Ubb. Nice to meet you! You can ask me anything about personal finance. If you would like a list of topics that I can tell you about, type 'help'",
         type: 'response',
-      },
-      {
-        content: 'hey',
-        type: 'send',
       },
     ],
   };
