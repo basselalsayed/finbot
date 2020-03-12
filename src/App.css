@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #08AEEA;
   background-image: linear-gradient(45deg, #08AEEA 0%, #2AF598 100%);
@@ -54,6 +58,21 @@ li {
   padding: 5px;
 }
 
+
+.article {
+  /* height: 100px; */
+}
+
+.article-link {
+  color: darkslategrey;
+  font-size: 15px;
+}
+/* 
+.card-img {
+  height: 50%;
+  width: 50%;
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -63,6 +82,23 @@ li {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+aside {
+  height: 100%;
+  width: 25%;
+  margin: 5% 1.5% 1.5% 0;
+  float: right;
+  bottom: 0;
+}
+
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 65%;
+}
+.news-api {
+  height: 100%;
 }
 
 .App-header {
