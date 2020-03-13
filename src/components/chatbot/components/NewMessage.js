@@ -24,7 +24,7 @@ export default class NewMessage extends Component {
       text: this.state.content,
     };
 
-    axios.post('http://finbot--api.herokuapp.com/user_input/', userInput);
+    axios.post('https://finbot--api.herokuapp.com/user_input/', userInput);
   };
 
   onSubmit = e => {

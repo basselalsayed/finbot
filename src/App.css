@@ -1,13 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400, 700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
   height: 100%;
 }
 
 body {
-  background-color: #08AEEA;
-  background-image: linear-gradient(45deg, #08AEEA 0%, #2AF598 100%);
+  background-color: #08aeea;
+  background-image: linear-gradient(45deg, #08aeea 0%, #2af598 100%);
   font-family: 'Open Sans';
 }
 .App {
@@ -41,7 +41,7 @@ body {
 }
 
 ul {
-  padding: 0 15px 0  0 ;
+  padding: 0 15px 0 0;
 }
 
 li {
@@ -81,7 +81,6 @@ section {
   height: 100%;
 }
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -104,19 +103,17 @@ section {
 .btn-primary {
   border: none;
   border-color: none;
-  background-color: #08AEEA;
+  background-color: #08aeea;
 }
 
 .btn-primary:hover {
-  background-color: #08AEEA;  
+  background-color: #08aeea;
   -webkit-animation: pulse 1.5s infinite;
 }
 
 #formBasicEmail {
   width: 80%;
 }
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -131,7 +128,7 @@ section {
   display: block;
   width: 60px;
   height: 40px;
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   margin-left: 20px;
   border-radius: 15px;
   display: flex;
@@ -152,48 +149,51 @@ section {
 }
 
 @keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
-  40%, 43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -30px, 0);
     transform: translate3d(0, -30px, 0);
   }
 
   70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0);
   }
 
   90% {
-    -webkit-transform: translate3d(0,-4px,0);
-    transform: translate3d(0,-4px,0);
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
   }
 }
 
-.circle:nth-child(1){
-  animation-delay: 0ms
+.circle:nth-child(1) {
+  animation-delay: 0ms;
 }
-  
+
 .circle:nth-child(2) {
-  animation-delay: 333ms
+  animation-delay: 333ms;
 }
 
 .circle:nth-child(3) {
-  animation-delay: 666ms
+  animation-delay: 666ms;
 }
 
-
-@keyframes shadow-pulse
-{
+@keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
   }
@@ -202,8 +202,7 @@ section {
   }
 }
 
-@keyframes shadow-pulse-big
-{
+@keyframes shadow-pulse-big {
   0% {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
   }

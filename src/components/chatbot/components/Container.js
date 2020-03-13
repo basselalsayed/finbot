@@ -29,7 +29,7 @@ export default class ExampleContainer extends Component {
 
   startTimer = () => {
     this.timer = setTimeout(() => {
-      axios.post('http://localhost:8000/api/user_input/', { text: 'help' });
+      axios.post('https://localhost:8000/api/user_input/', { text: 'help' });
       this.apiCallGet();
     }, 60000);
   };
@@ -43,7 +43,7 @@ export default class ExampleContainer extends Component {
   };
 
   apiCallGet = () => {
-    axios.get('http://finbot--api.herokuapp.com/api/').then(res =>
+    axios.get('https://finbot--api.herokuapp.com/api/').then(res =>
       this.newMessage({
         content: res.data,
         type: 'response',
