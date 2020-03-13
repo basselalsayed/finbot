@@ -53,7 +53,7 @@ export default class NewMessage extends Component {
             type="text"
             value={this.state.content}
             onChange={this.onChange}
-            placeholder="Ask me anything"
+            placeholder="Ask me about personal finance"
             autoComplete="off"
           />
           <Button variant="primary" type="submit">
