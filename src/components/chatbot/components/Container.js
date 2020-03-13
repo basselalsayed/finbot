@@ -75,8 +75,7 @@ export default class ExampleContainer extends Component {
           onScroll={this.listen}
         >
           <Card.Header onClick={this.toggleBot} style={{ cursor: 'pointer' }}>
-            {' '}
-            🤖 ubb
+            {' '} <img src='transparent-small.png' alt="hi i am"></img> ubb
           </Card.Header>
           <Card.Body id='chat-body'>
             <Conversation messages={this.state.messages} scroll={this.scrollToBottom}/>
