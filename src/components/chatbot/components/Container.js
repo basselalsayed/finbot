@@ -43,7 +43,7 @@ export default class ExampleContainer extends Component {
   };
 
   apiCallGet = () => {
-    axios.get('http://localhost:8000/api/').then(res =>
+    axios.get('http://finbot--api.herokuapp.com/api/').then(res =>
       this.newMessage({
         content: res.data,
         type: 'response',
@@ -60,9 +60,9 @@ export default class ExampleContainer extends Component {
   };
 
   scrollToBottom = () => {
-    let element = document.getElementById("chat-body");
-    element.scrollTo(0,element.scrollHeight)
-  }
+    let element = document.getElementById('chat-body');
+    element.scrollTo(0, element.scrollHeight);
+  };
 
   render() {
     const { showBot } = this.state;
@@ -75,10 +75,14 @@ export default class ExampleContainer extends Component {
           onScroll={this.listen}
         >
           <Card.Header onClick={this.toggleBot} style={{ cursor: 'pointer' }}>
-            {' '} <img src='transparent-small.png' alt="hi i am"></img> ubb
+            {' '}
+            <img src="transparent-small.png" alt="hi i am"></img> ubb
           </Card.Header>
-          <Card.Body id='chat-body'>
-            <Conversation messages={this.state.messages} scroll={this.scrollToBottom}/>
+          <Card.Body id="chat-body">
+            <Conversation
+              messages={this.state.messages}
+              scroll={this.scrollToBottom}
+            />
           </Card.Body>
           {this.state.loading ? <Loading /> : null}
           <Card.Footer>
