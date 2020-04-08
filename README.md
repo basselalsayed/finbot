@@ -10,7 +10,7 @@ We empower our users to be more financially independent by gamifying the learnin
 
 Our frontend consists of a web application with a chatbot interface that interacts with the user. 
 
-You can see the code for the API and bot (built using Natural Language Processing/machine learning) [here](https://github.com/meghaniankov/finbot-api/)
+You can see the code for the API and bot (built using Natural Language Processing/machine learning) [here](https://github.com/basselalsayed/finbot-api)
 
 ## Team
 
@@ -31,7 +31,7 @@ You can see the code for the API and bot (built using Natural Language Processin
     - End-to-end integration tests: Cypress
     - Unit tests: Jest, Enzyme
 - Networking: axios (for GET/POST requests to API)
-- Chatbot API: Python/Django [(view here)](https://github.com/meghaniankov/finbot-api)
+- Chatbot API: Python/Django [(view here)](https://github.com/basselalsayed/finbot-api)
 
 ### Deployment
 - Servers: Heroku
@@ -65,4 +65,4 @@ Direct your browser to ```http://localhost:3000```
 
 ### Launch Backend Server
 
-Directions on how to launch the backend server can be found [here](https://github.com/meghaniankov/finbot-api)
+Directions on how to launch the backend server can be found [here](https://github.com/basselalsayed/finbot-api)
