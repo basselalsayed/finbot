@@ -2,7 +2,7 @@
 
 **A chatbot to learn about personal finance.**
 
-[About](#about) • [Use](#how-to-use) • [Team](#team) • [Tech Stack](#tech-stack) • [Design](#design) • [Get started](#get-started) • [Test](#how-to-test)
+[About](#about) • [Team](#team) • [Technology We Used](#built-with) • [Design](#design) • [Get Started](#getting-started)
 
 ## About
 
@@ -10,55 +10,59 @@ We empower our users to be more financially independent by gamifying the learnin
 
 Our frontend consists of a web application with a chatbot interface that interacts with the user. 
 
-Deployed at: [?]
-
-## How to use
-[?]
+You can see the code for the API and bot (built using Natural Language Processing/machine learning) [here](https://github.com/meghaniankov/finbot-api/)
 
 ## Team
 
-Emily Spencer
+[Emily Spencer](https://github.com/emilyjspencer)
 
-Shadi Khazaei
+[Shadi Khazaei](https://github.com/shadz22)
 
-Meghan Iankov
+[Meghan Iankov](https://github.com/meghaniankov)
 
-Niki Manoledaki
+[Niki Manoledaki](https://github.com/nikimanoledaki)
 
-Bassel Al-Sayed
+[Bassel Al-Sayed](https://github.com/basselalsayed)
 
-## Tech Stack
-
-
-### Web App
-- Framework: React
+## Built With
 - Language: Javascript
+- Framework: React
 - Testing framework
     - End-to-end integration tests: Cypress
     - Unit tests: Jest, Enzyme
 - Networking: axios (for GET/POST requests to API)
-
-### API
-- Framework: Django
-- Language: Python
-- Testing framework
-    - Unit tests: pytest
-- Natural Language Processing (NLP): NLTK
+- Chatbot API: Python/Django [(view here)](https://github.com/meghaniankov/finbot-api)
 
 ### Deployment
-- CI: [?]
 - Servers: Heroku
 
 ## Design
+
 The user can interact with the chatbot. When the user inputs text, an HTTP request is sent to the API to fetch a response through axios. The API then receives the user input, parses the text through the Natural Language Processing model, and generates JSON bot responses.
 
+## Deployed App
 
-## Get started
+Frontend: https://finbot-fe.herokuapp.com/ 
+API: https://finbot--api.herokuapp.com/
+
+## Getting started
+
+After cloning the program, install npm:
 ```
-$ git clone https://github.com/basselalsayed/finbot.git
+$ npm install
 ```
 
-## How to test
+## Running the Program
+
+### Start the Server
 ```
-$ somehow run tests
+$ npm start
 ```
+
+### View in Browswer
+
+Direct your browser to ```http://localhost:3000```
+
+### Launch Backend Server
+
+Directions on how to launch the backend server can be found [here](https://github.com/meghaniankov/finbot-api)
