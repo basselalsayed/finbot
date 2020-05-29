@@ -31,38 +31,40 @@ You can see the code for the API and bot (built using Natural Language Processin
     - End-to-end integration tests: Cypress
     - Unit tests: Jest, Enzyme
 - Networking: axios (for GET/POST requests to API)
-- Chatbot API: Python/Django [(view here)](https://github.com/basselalsayed/finbot-api)
+- [Chatbot API](https://github.com/basselalsayed/finbot-api): Python/Django
 
-### Deployment
-- Servers: Heroku
 
 ## Design
 
 The user can interact with the chatbot. When the user inputs text, an HTTP request is sent to the API to fetch a response through axios. The API then receives the user input, parses the text through the Natural Language Processing model, and generates JSON bot responses.
 
-## Deployed App
 
-Frontend: https://finbot-fe.herokuapp.com/ 
-API: https://finbot--api.herokuapp.com/
+
+
 
 ## Getting started
 
-After cloning the program, install npm:
+### First Deploy [Backend Server](https://github.com/basselalsayed/finbot-api)
+
+Clone with 
+
+```git clone git@github.com:basselalsayed/finbot.git```
+
+Install dependencies:
 ```
-$ npm install
+$ yarn
 ```
 
 ## Running the Program
 
 ### Start the Server
 ```
-$ npm start
+$ yarn start
 ```
 
 ### View in Browswer
 
-Direct your browser to ```http://localhost:3000```
+Direct your browser to http://localhost:3000
 
-### Launch Backend Server
-
-Directions on how to launch the backend server can be found [here](https://github.com/basselalsayed/finbot-api)
+### Testing
+``` yarn test:coverage```
